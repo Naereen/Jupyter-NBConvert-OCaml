@@ -33,8 +33,26 @@ def comment_lines_ocaml(text, start='(* ', end=' *)'):
     return start + ('\n').join(text.split('\n')) + end
 
 
+def add_endsemicolon_ocaml(text, semicolon=';;'):
+    """
+    Build an OCaml idenpendent cell by adding a closing ';;' at the end.
+
+    Parameters
+    ----------
+    text : str
+        Text to comment out.
+    semicolon : str
+        By default ';;'.
+    """
+    if not text.endswith(semicolon):
+        return text + semicolon
+    else:
+        return text
+
+
 my_filters = {
-    'comment_lines_ocaml': comment_lines_ocaml
+    'comment_lines_ocaml': comment_lines_ocaml,
+    'add_endsemicolon_ocaml': add_endsemicolon_ocaml,
 }
 
 default_filters.update(my_filters)

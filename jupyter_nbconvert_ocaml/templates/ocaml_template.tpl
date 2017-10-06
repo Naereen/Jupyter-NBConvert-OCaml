@@ -16,7 +16,7 @@ https://github.com/Naereen/Jupyter-Notebook-OCaml/issues/new if you find one
 {% endblock in_prompt %}
 
 {% block input %}
-{{ cell.source }}
+{{ cell.source | add_endsemicolon_ocaml }}
 {% endblock input %}
 
 {% block markdowncell scoped %}
