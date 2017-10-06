@@ -8,6 +8,7 @@
 
 __author__ = "Lilian Besson (Naereen)"
 __version__ = "0.1"
+name = 'jupyter_nbconvert_ocaml'
 
 try:
     from setuptools import setup
@@ -21,11 +22,12 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
-with open(path.join(here, '..', 'README.rst'), encoding='utf-8') as f:
+with open(path.join(here, name, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 
-setup(name='jupyter_nbconvert_ocaml',
+setup(
+    name=name,
     version=__version__,
     author=__author__,
     author_email="naereen" + "@" + "crans.org",
@@ -43,9 +45,18 @@ setup(name='jupyter_nbconvert_ocaml',
         'Natural Language :: English',
         'Framework :: Jupyter'
     ],
-    entry_points = {
+    entry_points={
         'nbconvert.exporters': [
-            'ocaml = jupyter_nbconvert_ocaml:OCamlExporter',
-    ],
-    }
+            'ocaml = %s:OCamlExporter' % name,
+        ],
+    },
+    package_data={
+        name: [
+            path.join(name, 'templates', 'ocaml_template.tpl'),
+            path.join('templates', 'ocaml_template.tpl'),
+        ]
+    },
+    packages=[name],
+    install_requires=['traitlets', 'nbconvert'],
+    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, <4',
 )
