@@ -1,2 +1,4 @@
 *.pyc
 *~
+jupyter_nbconvert_ocaml/dist/
+jupyter_nbconvert_ocaml/jupyter_nbconvert_ocaml.egg-info/

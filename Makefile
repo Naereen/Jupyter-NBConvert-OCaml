@@ -21,3 +21,6 @@ convert_demo_ocaml_local:
 
 convert_demo_ocaml:
 	jupyter nbconvert --no-prompt --to ocaml --output demo_notebook_ocaml.ml  demo_notebook_ocaml.ipynb
+
+clean:
+	rm -rv jupyter_nbconvert_ocaml/__pycache__
