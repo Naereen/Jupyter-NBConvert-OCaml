@@ -13,8 +13,34 @@ import os.path
 
 from traitlets import default
 from traitlets.config import Config
+from nbconvert.exporters.templateexporter import default_filters
 from nbconvert.exporters.templateexporter import TemplateExporter
 
+
+def comment_lines_ocaml(text, start='(* ', end=' *)'):
+    """
+    Build an OCaml comment line from input text.
+
+    Parameters
+    ----------
+    text : str
+        Text to comment out.
+    start : str
+        Character to open the multi-line comment.
+    end : str
+        Character to close the multi-line comment.
+    """
+    return start + ('\n').join(text.split('\n')) + end
+
+
+my_filters = {
+    'comment_lines_ocaml': comment_lines_ocaml
+}
+
+default_filters.update(my_filters)
+
+
+# The class
 
 class OCamlExporter(TemplateExporter):
     """
@@ -45,3 +71,6 @@ class OCamlExporter(TemplateExporter):
         We want to use the new template we ship with our library.
         """
         return "ocaml_template"
+
+    def default_filters(self):
+        return default_filters.items()

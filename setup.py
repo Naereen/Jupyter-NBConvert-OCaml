@@ -26,14 +26,14 @@ with open(path.join(here, '..', 'README.rst'), encoding='utf-8') as f:
 
 
 setup(name='jupyter_nbconvert_ocaml',
-      version=__version__,
-      author=__author__,
-      author_email="naereen" + "@" + "crans.org",
-      description='Naive implementation of a Jupyter NBConvert Exporter for the OCaml language',
-      long_description=long_description,
-      license='OSI Approved :: MIT License',
-      url="https://github.com/Naereen/jupyter-nbconvert-ocaml",
-      classifiers=[
+    version=__version__,
+    author=__author__,
+    author_email="naereen" + "@" + "crans.org",
+    description='Naive implementation of a Jupyter NBConvert Exporter for the OCaml language',
+    long_description=long_description,
+    license='OSI Approved :: MIT License',
+    url="https://github.com/Naereen/jupyter-nbconvert-ocaml",
+    classifiers=[
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2',
@@ -42,10 +42,10 @@ setup(name='jupyter_nbconvert_ocaml',
         'Development Status :: 1 - Beta',
         'Natural Language :: English',
         'Framework :: Jupyter'
-      ],
-     entry_points = {
+    ],
+    entry_points = {
         'nbconvert.exporters': [
             'ocaml = jupyter_nbconvert_ocaml:OCamlExporter',
-        ],
-       }
+    ],
+    }
 )
