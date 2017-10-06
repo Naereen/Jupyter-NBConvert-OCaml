@@ -3,7 +3,7 @@
 """ Utility for uploading the package to PyPi.
 
 - MIT Licensed, (C) 2017 Lilian Besson (Naereen)
-  https://GitHub.com/Naereen/jupyter-nbconvert-ocaml
+  https://GitHub.com/Naereen/Jupyter-NBConvert-OCaml
 """
 
 __author__ = "Lilian Besson (Naereen)"
@@ -34,7 +34,7 @@ setup(
     description='Naive implementation of a Jupyter NBConvert Exporter for the OCaml language',
     long_description=long_description,
     license='OSI Approved :: MIT License',
-    url="https://github.com/Naereen/jupyter-nbconvert-ocaml",
+    url="https://github.com/Naereen/Jupyter-NBConvert-OCaml",
     classifiers=[
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: MIT License',

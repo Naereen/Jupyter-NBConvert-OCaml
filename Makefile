@@ -1,4 +1,6 @@
-# Makefile for testing
+# Makefile for testing and installing the custom OCaml exporter for Jupyter Notebook
+# MIT Licensed, (C) 2017 Lilian Besson (Naereen)
+# https://GitHub.com/Naereen/Jupyter-NBConvert-OCaml
 test:   convert_both_and_compare execute_both convert_demo_ocaml
 
 install:

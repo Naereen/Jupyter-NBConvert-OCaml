@@ -5,7 +5,7 @@
 See http://nbconvert.readthedocs.io/en/latest/external_exporters.html#writing-a-custom-exporter if needed.
 
 - MIT Licensed, (C) 2017 Lilian Besson (Naereen)
-  https://GitHub.com/Naereen/jupyter-nbconvert-ocaml
+  https://GitHub.com/Naereen/Jupyter-NBConvert-OCaml
 """
 
 import os
