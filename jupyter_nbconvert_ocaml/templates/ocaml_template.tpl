@@ -2,9 +2,9 @@
 
 {% block header %}
 (*
-    This OCaml script was exported from a Jupyter notebook using https://github.com/Naereen/jupyter-nbconvert-ocaml
+    This OCaml script was exported from a Jupyter notebook using https://github.com/Naereen/Jupyter-Notebook-OCaml
 
-    This software is still in development, please notify me of a bug if you find one! https://github.com/Naereen/jupyter-nbconvert-ocaml/issues/new
+    This software is still in development, please notify me of a bug if you find one! https://github.com/Naereen/Jupyter-Notebook-OCaml/issues/new
 *)
 {% endblock header %}
 
@@ -15,7 +15,7 @@
 {% endblock in_prompt %}
 
 {% block input %}
-{{ cell.source | ipython2python }}
+{{ cell.source }}
 {% endblock input %}
 
 {% block markdowncell scoped %}
