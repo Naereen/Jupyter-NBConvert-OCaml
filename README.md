@@ -2,7 +2,7 @@
 
 Installing this Python project allow to convert [Jupyter notebooks](https://www.jupyter.org/) written with the [OCaml Jupyter kernel](https://github.com/akabe/ocaml-jupyter/) directly to well-written `.ml` OCaml scripts. It solves [this issue](https://github.com/akabe/ocaml-jupyter/issues/58#issuecomment-334730337).
 
-## Install
+## a) Test, and install locally
 Clone this repository, test everything locally if you want, and then install it globally with:
 
 ```bash
@@ -15,6 +15,16 @@ $ python3 setup.py install  # for Python3 if needed
 ```bash
 $ sudo python3 setup.py install
 ```
+
+## b) Install directly from GitHub
+
+This package can also be installed directly from GitHub with [`pip`](http://pip.pypa.io/):
+
+```bash
+sudo pip install git+https://github.com/Naereen/Jupyter-NBConvert-OCaml
+```
+
+Check that you use pip2 or pip3 whether you installed Jupyter for Python 2 or Python 3. (You can of course install `Jupyter-NBConvert-OCaml` for both if you prefer!)
 
 ## Use it
 
