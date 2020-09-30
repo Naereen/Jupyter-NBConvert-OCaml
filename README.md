@@ -58,7 +58,7 @@ https://github.com/Naereen/Jupyter-NBConvert-OCaml/issues/new if you find one
 - [And this second OCaml file](demo_notebook_ocaml.ml) is the result of `jupyter-nbconvert --to ocaml`, our home-made conversion, which removes keep all comments and adds a small header.
 
 ## References
-> See the [documentation](http://nbconvert.readthedocs.io/en/latest/external_exporters.html#writing-a-custom-exporter) [I (Lilian Besson, @Naereen](https://GitHub.com/Naereen) used to write this small exporter.
+> See the [documentation](http://nbconvert.readthedocs.io/en/latest/external_exporters.html#writing-a-custom-exporter) [I (Lilian Besson, @Naereen)](https://GitHub.com/Naereen) used to write this small exporter.
 
 ----
 

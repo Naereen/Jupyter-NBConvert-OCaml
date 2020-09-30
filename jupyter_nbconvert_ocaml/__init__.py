@@ -4,7 +4,7 @@
 
 See http://nbconvert.readthedocs.io/en/latest/external_exporters.html#writing-a-custom-exporter if needed.
 
-- MIT Licensed, (C) 2017 Lilian Besson (Naereen)
+- MIT Licensed, (C) 2017-2020 Lilian Besson (Naereen)
   https://GitHub.com/Naereen/Jupyter-NBConvert-OCaml
 """
 
@@ -35,7 +35,7 @@ def comment_lines_ocaml(text, start='(* ', end=' *)'):
 
 def add_endsemicolon_ocaml(text, semicolon=';;'):
     """
-    Build an OCaml idenpendent cell by adding a closing ';;' at the end.
+    Build an OCaml indenpendent cell by adding a closing ';;' at the end.
 
     Parameters
     ----------
@@ -65,6 +65,11 @@ class OCamlExporter(TemplateExporter):
     Custom Jupyter NBConvert Exporter for the OCaml language.
     """
 
+    # If this custom exporter should add an entry to the
+    # "File -> Download as" menu in the notebook, give it a name here in the
+    # `export_from_notebook` class member
+    export_from_notebook = "OCaml (.ml)"
+
     @default('file_extension')
     def _file_extension_default(self):
         """
@@ -81,6 +86,17 @@ class OCamlExporter(TemplateExporter):
         `./templates/` so append it to the search path. (see next section)
         """
         return super().template_path + [os.path.join(os.path.dirname(__file__), "templates")]
+
+
+    @property
+    def template_paths(self):
+        """
+        We want to inherit from script template, and have template under
+        `./templates/` so append it to the search path. (see next section)
+
+        Note: nbconvert 6.0 changed ``template_path`` to ``template_paths``
+        """
+        return super().template_paths + [os.path.join(os.path.dirname(__file__), "templates")]
 
 
     @default('template_file')
